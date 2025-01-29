@@ -44,7 +44,7 @@ OBJETIVO:
 ├── estrutura-do-projeto_002.txt
 ├── index.html
 ├── observacoes_gerais
-└── projeto_cafeteria_cariaca
+└── projeto_cafeteria_carioca
     └── assets
         ├── css
         │   ├── style-footer.css

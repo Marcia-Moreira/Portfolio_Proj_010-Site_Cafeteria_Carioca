@@ -1,0 +1,91 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: style.css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+
+/*? INÍCIO DO FOOTER: */
+footer {
+    background-color: var(--bgColor-primary);
+    color: var(--surfaceColor-secondary);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: auto;
+    border-top: var(--border-color);
+}
+/* Botões sociais: */
+footer .share {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 1rem 0;
+}
+footer .share button{
+    width: 3.0rem;
+    height: 3.0rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--surfaceColor-primary);
+    border: 1px solid var(--surfaceColor-secondary);
+    border: 1px solid var(--surfaceColor-primary);
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+footer .share button:hover {
+    font-size: 1.7rem;
+    color: var(--surfaceColor-primary);
+    border: 1px solid var(--surfaceColor-secondary);
+    border: 1px solid var(--surfaceColor-primary);
+}
+/* Assinatura: */
+footer .assinatura-MM {
+    display: flex;
+    justify-content: center;
+
+    transition-duration: 0.3s;
+    text-align: center;
+}
+.assinatura-MM a {
+    font-size: 1rem;
+    color: var(--hover-primary);
+    transition-duration: 0.3s;
+    line-height: 1.2;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+.assinatura-MM:hover a {
+    color: var(--surfaceColor-primary);
+}
+.assinatura-MM p {
+    color: var(--text-primary);
+    /* color: var(--text-secondary); */
+}
+.assinatura-MM:hover p {
+    color: var(--surfaceColor-primary);
+}
+
+/*? FIM DO FOOTER */

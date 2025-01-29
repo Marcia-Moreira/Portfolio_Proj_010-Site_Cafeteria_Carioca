@@ -1,0 +1,297 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: .css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+/* 
+*PADRÕES INICIAIS: ROOT
+*Iniciar projeto no Tema Escuro.
+*Principal sempre mais forte, mais escuro ou maior
+*Secundário sempre mais fraco, mais claro ou menor
+*Intermediario sempre no meio termo dos anteriores.
+
+Paleta de Cores Conjuntos de Temas para Botão NavMenu:
+
+- Dark ->
+- Ligth ->
+- Colorful ->
+
+====================================
+USAR no Código CSS os padrões: (dentro deles serão vinculados os themes acima)
+
+--border-radius ->
+
+--box-shadow ->
+
+FUNDOS de TELA:
+BackGrounds Primários:
+--bg_principal ->
+--bg_intermediario ->
+--bg_secundario ->
+BackGrounds Secundários:
+--bg-shadow_principal -> variação sombra para bg_principal!
+--bg-shadow_intermediario ->
+--bg-shadow_secundario ->
+
+TEXTOS:
+--color_principal ->
+--color_intermediario ->
+--color_secundario ->
+
+====================================
+Tamanho das FONTES em rem:
+- Tipos de Fontes ->
+
+- Tamanho Fonte Título Principal Tela Notebook:
+- Tamanho Fonte Título Principal Tela Tablet:
+- Tamanho Fonte Título Principal Tela Celular:
+
+- Tamanho Fonte Título Secundário Tela Grande:
+- Tamanho Fonte Título Secundário Tela Tablet:
+- Tamanho Fonte Título Secundário Tela Celular:
+
+- Tamanho Fonte Texto Principal Tela Notebook:
+- Tamanho Fonte Texto Principal Tela Tablet:
+- Tamanho Fonte Texto Principal Tela Celular:
+
+- Tamanho Fonte Texto Secundário Tela Grande:
+- Tamanho Fonte Texto Secundário Tela Tablet:
+- Tamanho Fonte Texto Secundário Tela Celular:
+
+====================================
+
+PADRÕES DE CLASSES CSS:
+
+Classes Mestres:
+- * (reset)
+- .btn
+- .icon
+- .img-p
+- .img-m
+- .img-g
+- .rodape
+- .assinatura
+
+* No html criar classes: .btn .variacoes
+
+====================================
+*/
+/*? INÍCIO LAYOUTS GERAIS: */
+/* Reset de Página: */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize; /*Palavras Letra Maiúscula*/
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+/** Paleta de Cores: */
+/* ========================== */
+/** === Light-Theme: PADRÃO DA PÁGINA === */
+:root {
+    /* === Cores de Fundo: === */
+    /* --bgColor-primary: #fff; */
+    /* --bgColor-primary: #dbdbdb; */
+    /* --bgColor-primary: #fdf7f7; */
+    --bgColor-primary: #ddd7d7;
+    --bgColor-intermediary: rgb(220, 220, 220);
+    /* --bgColor-secondary: #dbdbdb; */
+    --bgColor-secondary: #fff;
+
+    /* === Cores de Superfície: === */
+    --surfaceColor-primary: #d3ad7f;
+    --surfaceColor-intermediary: #fff;
+    --surfaceColor-secondary: #13131a;
+
+    /* === Cores de Texto: === */
+    --text-primary: #13131a;
+    --text-intermediary: #fff;
+    --text-secondary: #d3ad7f;
+
+    /* === Cores de Botões: === */
+    --button-bg: #d3ad7f;
+    --button-text: #fff;
+    --button-hover-bg: #d3ad7f;
+    --button-hover-text: #13131a;
+
+    /* === Cores de Bordas: === */
+    --border-color: 0.1rem solid rgba(255, 255, 255, 0.3);
+
+    /* === Cores de Sombras: === */
+    --shadow-primary: 0px 4px 10px rgba(232, 181, 150, 0.90);
+    --shadow-secondary: 0 4px 6px rgba(229, 245, 244, 0.1);
+
+    /* === Outros Elementos: === */
+    --link-color: #007BFF;
+    --link-hover-color: #0056b3;
+
+    /* === === */
+    --hover-primary: #fff;
+    --hover-secundary: #131313;
+}
+/** === Dark-Theme: BOTÃO MANUAL === */
+.dark-theme {
+    /* === Cores de Fundo: === */
+    --bgColor-primary: #010103;
+    --bgColor-intermediary: rgba(0, 0, 0, 1);
+    --bgColor-secondary: #13131a;
+
+    /* === Cores de Superfície: === */
+    --surfaceColor-primary: #d3ad7f;
+    --surfaceColor-intermediary: #13131a;
+    --surfaceColor-secondary: #fff;
+
+    /* === Cores de Texto: === */
+    --text-primary: #fff;
+    --text-intermediary: #13131a;
+    --text-secondary: #d3ad7f;
+
+    /* === Cores de Botões: === */
+    --button-bg: #d3ad7f;
+    --button-text: #fff;
+    --button-hover-bg: #d3ad7f;
+    --button-hover-text: #13131a;
+
+    /* === Cores de Bordas: === */
+    --border-color: 0.1rem solid rgba(255, 255, 255, 0.3);
+
+    /* === Cores de Sombras: === */
+    --shadow-primary: 0px 4px 10px rgba(232, 181, 150, 0.90);
+    --shadow-secondary: 0 4px 6px rgba(229, 245, 244, 0.1);
+
+    /* === Outros Elementos: === */
+    --link-color: #007BFF;
+    --link-hover-color: #0056b3;
+
+    /* === === */
+    --hover-primary: #fff;
+    --hover-secundary: #131313;
+}
+/** === Dark-Theme: PREFERÊNCIA NAVEGADOR === */
+@media (prefers-color-scheme: dark) {
+    :root {
+    /* === Cores de Fundo: === */
+    --bgColor-primary: #010103;
+    --bgColor-intermediary: rgba(0, 0, 0, 1);
+    --bgColor-secondary: #13131a;
+
+    /* === Cores de Superfície: === */
+    --surfaceColor-primary: #d3ad7f;
+    --surfaceColor-intermediary: #13131a;
+    --surfaceColor-secondary: #fff;
+
+    /* === Cores de Texto: === */
+    --text-primary: #fff;
+    --text-intermediary: #13131a;
+    --text-secondary: #d3ad7f;
+
+    /* === Cores de Botões: === */
+    --button-bg: #d3ad7f;
+    --button-text: #fff;
+    --button-hover-bg: #d3ad7f;
+    --button-hover-text: #13131a;
+
+    /* === Cores de Bordas: === */
+    --border-color: 0.1rem solid rgba(255, 255, 255, 0.3);
+
+    /* === Cores de Sombras: === */
+    --shadow-primary: 0px 4px 10px rgba(232, 181, 150, 0.90);
+    --shadow-secondary: 0 4px 6px rgba(229, 245, 244, 0.1);
+
+    /* === Outros Elementos: === */
+    --link-color: #007BFF;
+    --link-hover-color: #0056b3;
+
+    /* === === */
+    --hover-primary: #fff;
+    --hover-secundary: #131313;
+    }
+}
+/* ========================== */
+/* 
+/** Para ajustar a ancoragem dos Links: */
+html {
+    /* Ancoragem = Calcular conforme tamanho da Nav Fixa: */
+    scroll-padding-top: 115px;
+    font-size: 10px;
+}
+body {
+    background-color: var(--bgColor-primary);
+}
+/* Seção com padrão centralizado: */
+section {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+}
+.btn {
+    background: var(--surfaceColor-primary);
+    color: var(--surfaceColor-secondary);
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    /* Para respeitar o margin: */
+    display: inline-block;
+    border-radius: 5px 0px 5px 0px;
+    margin-bottom: 1rem;
+}
+.btn:hover {
+    letter-spacing: 0.1rem;
+}
+.title {
+    font-size: 4rem;
+    color: var(--surfaceColor-primary);
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+.title span {
+    color: var(--surfaceColor-secondary);
+    text-transform: uppercase;
+}
+.content {
+    flex: 1;
+    max-width: 60rem;
+    text-align: left;
+}
+.content h3 {
+    /* Para Garantir o contraste na Imagem em qualquer Thema */
+    color: var(--surfaceColor-primary);
+    font-size: 6rem;
+    padding-top: 6rem;
+}
+.content p {
+    color: var(--surfaceColor-primary);
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 1rem 0;
+}
+/* FIM LAYOUTS GERAIS: */

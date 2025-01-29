@@ -1,0 +1,244 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: style.css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+/*? INÍCIO NAVBAR CABEÇALHO: */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99; /* sob todos os outros */
+    border-bottom: var(--border-color);
+    background-color: var(--bgColor-primary);
+}
+.navbar-container {
+    padding: 3rem 2rem;
+}
+.header .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.nav a {
+    text-decoration: none;
+}
+.nav ul {
+    list-style: none;
+}
+.nav {
+    max-width: 1280px;
+    height: 7.0rem;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list {
+    display: flex;
+    gap: 3.2rem;
+    list-style: none;
+    color: var(--surfaceColor-secondary);
+    padding-left: 5rem;
+}
+.nav__list a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    /* Facilita o Click do Usuário: */
+    padding-block: 1.6rem;
+    color: var(--surfaceColor-secondary);
+    
+}
+.nav__list a:hover {
+    color: var(--surfaceColor-primary);
+    border-bottom: 0.1rem solid var(--surfaceColor-primary);
+    padding-bottom: 0.5rem;
+    font-size: 1.9rem;
+    /* transition: transform 0.1s ease; */
+    transition: color 0.3s, border-bottom 0.3s, font-size 0.3s;
+}
+.logo {
+    position: absolute;
+    left: 3.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.logo img {
+    border-radius: 75%;
+    width: 10rem;
+    transition: box-shadow 0.3s;
+}
+.logo img:hover {
+    box-shadow: var(--shadow-primary);
+}
+/*? Botão Interruptor Theme Light or Dark: */
+.trilho {
+    width: 5rem;
+    height: 2rem;
+    background-color: var(--surfaceColor-primary);
+    border-radius: 15rem;
+    /* Para deixar a classe da bola dentro do trilho: */
+    position: relative;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.trilho .indicador {
+    width: 3rem;
+    height: 2rem;
+    background-color: var(--surfaceColor-secondary);
+    border-radius:40%;
+    /* Para Bolinha ficar menor dentro do espaço, com profundidade: */
+    transform: scale(.8);
+
+    position: absolute;
+    /* sempre iniciará lado esquerdo */
+    left: 0;
+    transition: .5s;
+
+    /* Alinhamento de texto interno: */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.trilho .indicador p {
+    text-align: center;
+    color: var(--text-intermediary);
+}
+/* ================= TEMAS DARK: ================= */
+/* Não pode haver espaço entre as duas classes!!! */
+/* O que vai acontecer sempre que existir a classe dark dentro da classe trilho? */
+/* Tema Dark aplicado ao body */
+body.dark-theme .trilho {
+    background-color: var(--surfaceColor-primary);
+}
+
+body.dark-theme .trilho .indicador {
+    left: 2rem; /* Move a bolinha para a direita no Modo Escuro */
+    background-color: var(--surfaceColor-secondary); /* Bolinha branca no Modo Escuro */
+}
+
+body.dark-theme .trilho .indicador p {
+    color: var(--text-intermediary); /* Texto da bolinha no Modo Escuro */
+}
+/* Fim themas  */
+/* Icons do Bootstrap: Lupa e Carrinho */
+.icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 6rem;
+    cursor: pointer;
+}
+/* Contador Carrinho: */
+.icon-menu {
+    position: relative;
+}
+/* Estilo para a animação da imagem: */
+.fly-image {
+    position: absolute; /* Permite mover a imagem livremente */
+    pointer-events: none; /* Para que a imagem não interfira com cliques */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animação suave */
+    opacity: 0; /* Inicialmente invisível */
+}
+.cart-pay {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.item-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    pointer-events: none; /* Evita que a bolha interfira nos cliques */
+}
+/* Animação para a classe 'added' */
+.cart-pay.added {
+    animation: bounce 0.6s;
+}
+/* Definição da Animação 'bounce' */
+@keyframes bounce {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.icon-menu i {
+    font-size: 2rem;
+    color: var(--surfaceColor-primary);
+    transition: transform 0.3s, color 0.3s;
+}
+.icon-menu:hover i {
+    font-size: 2.1rem;
+    color: var(--hover-primary);
+}
+/* Para Esconder mobile-icons em telas grandes */
+.mobile-icons {
+    display: none;
+    cursor: pointer;
+}
+/* Menu Amburguer: */
+.hamburger {
+    display: none; /* Display Escondido em telas grandes*/
+    border: none;
+    background: none;
+    border-top: 0.28rem solid var(--surfaceColor-primary);
+    cursor: pointer;
+
+    position: relative;
+    width: 3rem;
+    height: 2.4rem;
+    transition: transform 0.3s;
+}
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    display: block;
+    width: 3rem;
+    height: 0.28rem;
+    background: var(--surfaceColor-primary);
+    margin-top: 6px;
+    /* Para fechamento do X: */
+    /* position: relative; */
+    /* transition: 0.4s; */
+    position: absolute;
+    transition: transform 0.4s, top 0.4s;
+}
+.hamburger::before {
+    top: 0;
+}
+.hamburger::after {
+    top: 10px;
+}
+/* FIM NAVMENU CABEÇALHO */

@@ -1,0 +1,41 @@
+.
+├── LICENSE.md
+├── README.md
+├── desktop.ini
+├── estrutura-do-projeto_002.txt
+├── index.html
+├── observacoes_gerais
+└── projeto_cafeteria_cariaca
+    └── assets
+        ├── css
+        │   ├── style-footer.css
+        │   ├── style-generalFormatting.css
+        │   ├── style-generalResponsive.css
+        │   ├── style-menuNavHamburger.css
+        │   ├── style-sectionAbout.css
+        │   ├── style-sectionAddress.css
+        │   ├── style-sectionHome.css
+        │   ├── style-sectionMenuCardapio.css
+        │   └── style-sectionReviews.css
+        ├── img
+        │   ├── about-img.jpg
+        │   ├── favicon.ico
+        │   ├── home-img.jpg
+        │   ├── logo.png
+        │   ├── menu-1.png
+        │   ├── menu-2.png
+        │   ├── menu-3.png
+        │   ├── menu-4.png
+        │   ├── menu-5.png
+        │   ├── menu-6.png
+        │   ├── pic-1.png
+        │   ├── pic-2.png
+        │   ├── pic-3.png
+        │   └── quote-img.png
+        └── js
+            ├── script-cartCounter.js
+            ├── script-imageFly.js
+            ├── script-menu.js
+            └── script-theme.js
+
+7 directories, 42 files

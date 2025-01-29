@@ -1,0 +1,94 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: style.css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+/*? INÍCIO DA REVIEW: */
+.review-container {
+    color: var(--surfaceColor-secondary);
+    justify-content: center;
+    justify-items: center;
+    max-width: 1200px;
+    gap: 50px;
+    /* background-color: var(--black); */
+}
+.boxreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    text-align: center;
+
+    padding: 3rem 2rem;
+    position: relative;
+
+    min-height: 300px;
+    justify-content: space-between;
+
+    border: var(--border-color);
+    border-radius: 5px;
+
+    background-color: var(--bgColor-secondary);
+}
+.boxreview:hover {
+    box-shadow:  var(--shadow-primary);
+}
+.boxreview .aspas {
+    width: 2rem;
+    height: 2rem;
+}
+.boxreview p {
+    text-transform: none;
+    font-size: 1.5rem;
+    color: var(--surfaceColor-secondary);
+    padding: 2rem 0;
+    line-height: 1.8;
+    max-height: 9rem;
+    overflow: hidden;
+    /* Adiciona Reticências no fim do texto: */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.boxreview .foto-cliente {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-primary);
+    object-fit: cover;
+    margin: 20px;
+}
+.boxreview h3 {
+    color: var(--surfaceColor-secondary);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.boxreview .stars span i {
+    color: var(--surfaceColor-primary);
+    margin: 0.3rem;
+}
+/*? FIM DA REVIEW */

@@ -1,0 +1,81 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: style.css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+/* INÍCIO DA MENU/CARDÁPIO: */
+.menu-container {
+    justify-content: center;
+    justify-items: center;
+}
+.menu-container .boxcard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+.menu-container .boxcard-container .boxcard {
+    background-color: var(--surfaceColor-intermediary);
+    text-align: center;
+    border: var(--border-color);
+    padding: 5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 auto; 
+}
+.menu-container .boxcard-container .boxcard img {
+    height: 10rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-primary);
+    margin: 0 auto 1rem;
+}
+.logo img {
+    width: 8rem;
+}
+.menu-container .boxcard-container .boxcard h3 {
+    color: var(--surfaceColor-primary);
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.menu-container .boxcard-container .price {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+}
+.menu-container .boxcard-container .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+.menu-container .boxcard-container .boxcard:hover {
+    background-color: var(--surfaceColor-secondary);
+    transition-duration: 0.9s;   
+}
+.menu-container .boxcard-container .boxcard:hover>* {
+    /* color: var(--text-primary); */
+    /* color: var(--text-secondary); */
+    color: var(--text-intermediary);
+}
+/* FIM DA MENU/CARDÁPIO: */

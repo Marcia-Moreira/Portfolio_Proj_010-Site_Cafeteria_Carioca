@@ -1,0 +1,354 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: style.css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+/* ?========================================================== */
+/*? RESPONSIVIDADE DE TELAS - ESQUELETO PADRÃO */
+@media (max-width: 1000px) {
+    
+}
+/*? Para telas pequenas (tablets): 1 coluna */
+@media (max-width: 750px) {
+
+}
+/*? Para telas pequenas (celulares): 1 coluna */
+@media (max-width: 535px) {
+
+}
+/*? RESPONSIVIDADE DE TELAS - ESQUELETO PADRÃO */
+/* ?========================================================== */
+
+/*? RESPONSIVIDADE DE TELAS */
+@media (max-width: 1000px) {
+/* Para ajustar o menu em tela grande: */
+    ul.nav__list {
+        padding-left: 15rem;
+    }
+    .nav__list a {
+        font-size: 1.5rem;
+    }
+    .content h3 {
+        font-size: 4rem;
+        padding-top: 6rem;
+    }
+    .logo img {
+        width: 8rem;
+    }
+}
+
+/*? Para telas pequenas (tablets): 1 coluna */
+@media (max-width: 750px) {
+/* NAV MENU HAMBURGER BOLHA ABAIXO: */
+    .hamburger {
+        display: block;
+        /* Para sobrepor o icone sobre a bolha: */
+        z-index: 2;
+    }
+/* Ajustar o logo na esquerda */
+    .logo {
+        position: absolute;
+        left: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .logo img {
+        width: 7rem;
+    }
+/* Ajustar o hamburger na direita */
+    .hamburger {
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+/* Para arrumar alinhamento do X */
+    .nav.active .hamburger {
+        transform: translateY(-0%);
+    }
+/* Estilizar o menu hamburger */    
+    .nav__list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        /* background-color: var(--bgColor-secondary); */
+        background-color: var(--bgColor-primary);
+        /* Usar Mascara de Bolha: */
+        clip-path: circle(0% at 90% -15%);
+        transition: clip-path 1.0s ease-out, background-color 1.2s ease-out;
+
+        /* Posicionamento */
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0rem;
+        /* Proteção de área de click: */
+        pointer-events: none;
+        z-index: 1;
+    }
+    .nav__list a {
+        font-size: 2rem;
+        color: var(--surfaceColor-secondary);
+        opacity: 0;
+    }
+    .nav__list a:hover {
+        font-size: 2.1rem;
+        color: var(--surfaceColor-primary);
+        transition: transform 0.1s ease;
+    }
+    ul.nav__list {
+        padding-left: 0rem;
+    }
+/* Atraso aparição nos ítens do menu Ativo */
+    .nav__list li:nth-child(1) a {
+        transition: 0.5s 0.2s;
+    }
+    .nav__list li:nth-child(2) a {
+        transition: 0.5s 0.4s;
+    }
+    .nav__list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+    .nav__list li:nth-child(4) a {
+        transition: 0.5s 0.8s;
+    }
+    .nav__list li:nth-child(5) a {
+        transition: 0.5s 1.0s;
+    }
+/* Exibir os ícones dentro do menu em telas pequenas */
+    .mobile-icons {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    /* Posicionar .mobile-icons ao Lado do Hamburger: */
+    .mobile-icons .icon-menu i {
+        font-size: 1.8rem; /* Ajuste o tamanho conforme necessário */
+        color: var(--surfaceColor-primary);
+        transition: transform 0.3s, color 0.3s;
+    }
+    .mobile-icons .icon-menu:hover i {
+        font-size: 2rem;
+        color: var(--hover-light);
+    }
+/* Inicialmente escondido */
+    .nav__list .mobile-icons {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+/* Estilos Ativos: */
+    .nav.active .nav__list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all; /* evento de ponteiro*/
+        background-color: var(--bgColor-intermediary);
+        background-color: var(--bgColor-primary);
+    }
+    .nav.active .nav__list a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .nav.active .nav__list .mobile-icons {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .nav.active .hamburger {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        /* Para sumir com o primeiro tracinho: */
+        border-top-color: transparent;
+    }
+/* Para Fazer o X com os dois pauzinhos: */
+    .nav.active .hamburger::before {
+        transform: rotate(135deg);
+        top: 10px;
+    }
+    .nav.active .hamburger::after {
+        transform: rotate(-135deg);
+        /* top: -7px; */
+        top: 10px;
+    }
+/* Estilos Gerais: */
+    section {
+        max-width: 600px;
+    }
+    .title {
+        font-size: 3rem;
+    }
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+    .btn:hover {
+        letter-spacing: 0.05rem;
+    }
+    .content {
+        padding-top: 2rem;
+        min-width: 20rem;
+    }
+    .content h3 {
+        font-size: 3.5rem;
+        padding-top: 3rem;
+        text-align: center;
+    }
+    .content p {
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: center;
+    }
+/* Section Home: */
+    .home-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column; 
+    }
+    .home-container .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .home-container .content a {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+/* Item para o Carrinho: */
+
+/* Estilos para a animação de voo */
+    .flying-image {
+        position: fixed;
+        width: 30px; /* Ajuste o tamanho conforme necessário */
+        height: 30px;
+        object-fit: cover;
+        border-radius: 50%;
+        z-index: 1000;
+        pointer-events: none;
+        transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        animation: flyToCart 1s forwards;
+    }
+    @keyframes flyToCart {
+        0% {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(var(--translateX), var(--translateY)) scale(0.1);
+        }
+    }
+/* Section Sobre: */
+    .about-container .row {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+    }
+    .about-container .row .content {
+        max-width: 600px;
+        text-align: center;
+    }
+    .about-container .row .content p {
+        font-size: 1.6rem;
+        padding: 0.8rem 0;
+    }
+    .container-image img {
+        max-width: 90%;
+        height: auto;
+    }
+/* Section Menu: */
+    .menu-container .boxcard-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .menu-container .boxcard-container .price {
+        font-size: 2.1rem;
+    }
+/* Section Review: */
+    .review-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+/* Section Address: */
+    .address-container iframe {
+        max-width: 50rem;
+        max-height: 50rem;
+    }
+}
+/*? Para telas pequenas (celulares): 1 coluna */
+@media (max-width: 535px) {
+/* Seção NavMenu: */
+    .navbar-container {
+        padding: 2rem 1rem;
+    }
+    .logo img {
+        width: 6rem;
+    }
+/* Seção Sobre: */
+    .about-container .row {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 5px;
+    }
+    .about-container .row .content h3 {
+        font-size: 2.5rem;
+    }
+    .about-container .row .content p {
+        font-size: 1.6rem;
+    }
+    .container-image img {
+        width: 100%;
+        max-width: 300px;
+        padding-top: 1rem;
+    }
+    .about-container .row .content {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+/* Seção Endereço: */
+    .address-container iframe {
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+}

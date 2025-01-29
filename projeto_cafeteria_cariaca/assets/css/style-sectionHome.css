@@ -1,0 +1,45 @@
+/*
+================================================
+  Project: Site Cafeteria (Portfólio Pessoal)
+  File: style.css
+  Author: MARCIA MOREIRA
+  Role: Desenvolvedora Web - Full Stack 
+
+  Technologies Used:
+  - HTML5
+  - CSS3 (Flexbox, Grid)
+  - JavaScript (ES6+)
+  - Frameworks/Libraries: Bootstrap
+  - Version Control: Git/GitHub/GitHubPages
+  
+  References Used:
+  - Site Video: https://youtu.be/v1jVqO6dx9A?si=S9Jczzitcu4f1hZq
+  - Site Imagens: https://ibb.co/album/8KjM76
+  
+  Contact Information:
+  - Email: id.marcia.moreira@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/idmarciamoreira
+  - GitHub: https://github.com/Marcia-Moreira
+  
+  Creation Date: 20-09-2024
+  Last Updated: 20-09-2024
+================================================
+*/
+/*? INÍCIO DA HOME: */
+/* section */
+.home-container {
+    background: url("../img/home-img.jpg");
+    background-position: center;
+    background-size: cover; /*sempre cobre o espaço todo*/
+    min-height: 100vh;
+    margin-left: 0;
+    margin-right: 0;
+}
+.home-container .content {
+    padding: 16rem;
+    padding-top: 8rem;
+    padding-left: 13rem;
+}
+
+/* FIM DA HOME: */
+

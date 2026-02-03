@@ -3,9 +3,12 @@
 # Project: Site Cafeteria Carioca (Portfólio Pessoal)
 
 Files: *.css / *.html / *.js
+
 Author: MARCIA MOREIRA
+
 Role: Desenvolvedora Web - Full Stack
-Ddeploy: <https://marcia-moreira.github.io/Portfolio_Proj_010-Site_Cafeteria_Carioca/>
+
+Deploy: <https://marcia-moreira.github.io/Portfolio_Proj_010-Site_Cafeteria_Carioca/>
 
 # Technologies Used
 
